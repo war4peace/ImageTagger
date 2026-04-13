@@ -1,5 +1,4 @@
 # ImageTagger
-<<<<<<< HEAD
 
 A Windows desktop application that uses a locally running [Ollama](https://ollama.com) vision model to automatically tag and rename JPEG photos with AI-generated descriptions stored as EXIF metadata.
 
