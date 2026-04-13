@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace ImageTagger.Models;
 
-/// <summary>User preferences, persisted to %AppData%\ImageTagger\settings.json.</summary>
+/// <summary>User preferences, persisted to Documents\ImageTagger\settings.json.</summary>
 public class AppSettings
 {
     public string OllamaUrl           { get; set; } = "http://127.0.0.1:11434";
@@ -23,7 +23,7 @@ public class AppSettings
     // ── Persistence ──────────────────────────────────────────────────────────
 
     private static readonly string SettingsPath = Path.Combine(
-        Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
+        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
         "ImageTagger", "settings.json");
 
     private static readonly JsonSerializerOptions _opts =
