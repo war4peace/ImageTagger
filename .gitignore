@@ -1,0 +1,42 @@
+## Build output
+bin/
+obj/
+out/
+publish/
+
+## Visual Studio / Rider
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+## NuGet
+*.nupkg
+*.snupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## .NET runtime
+*.pid
+*.seed
+*.pid.lock
+
+## OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+## User-specific settings
+# (AppSettings are stored in %AppData%\ImageTagger\settings.json — outside this tree)
+# If a local appsettings file is ever added, exclude it here:
+appsettings.local.json
+appsettings.*.local.json
+secrets.json

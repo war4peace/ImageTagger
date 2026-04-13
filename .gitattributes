@@ -1,0 +1,20 @@
+# Normalize line endings to LF in the repository; Git converts to CRLF on
+# Windows checkouts automatically.  This keeps diffs clean regardless of OS.
+* text=auto
+
+# Force LF for source files
+*.cs        text eol=lf
+*.xaml      text eol=lf
+*.csproj    text eol=lf
+*.sln       text eol=lf
+*.md        text eol=lf
+*.json      text eol=lf
+*.gitignore text eol=lf
+
+# Treat binary files as binary (no line-ending conversion)
+*.ico       binary
+*.png       binary
+*.jpg       binary
+*.jpeg      binary
+*.exe       binary
+*.dll       binary

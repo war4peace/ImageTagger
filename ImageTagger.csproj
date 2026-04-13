@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <RootNamespace>ImageTagger</RootNamespace>
+    <AssemblyName>ImageTagger</AssemblyName>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- EXIF reading + image dimensions (fast, read-only) -->
+    <PackageReference Include="MetadataExtractor" Version="2.8.1" />
+    <!-- EXIF writing — reliable across all JPEG types, even those without existing EXIF -->
+    <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    <!-- Fluent / Windows 11 UI controls -->
+    <PackageReference Include="WPF-UI" Version="3.0.4" />
+    <!-- Image resizing before Ollama encoding — caps VRAM usage for models with dynamic resolution (e.g. Qwen2.5-VL) -->
+    <!-- Using System.Drawing.Common (Microsoft GDI+ wrapper) instead of ImageSharp to avoid known CVE advisories -->
+    <PackageReference Include="System.Drawing.Common" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Embed the application icon so it is available as a WPF resource at runtime -->
+    <Resource Include="app.ico" />
+  </ItemGroup>
+
+
+</Project>
