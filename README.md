@@ -1,3 +1,5 @@
+## NOTE: This tool has been superseeded by [Image Toolbox](https://github.com/war4peace/image-toolbox).
+
 # ImageTagger
 
 A Windows desktop application that uses a locally running [Ollama](https://ollama.com) vision model to automatically tag and rename JPEG photos with AI-generated descriptions stored as EXIF metadata.
